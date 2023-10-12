@@ -21,7 +21,7 @@ const IMAGE_MAP = {
 export default function SelectedCaponier({caponier}: {caponier: keyof typeof CAPONIERS}) {
     const dict = getDictionary('ua')
     return (
-        <div className='text-white -mt-12 z-10'>
+        <div className='text-white z-10'>
             <div className='flex justify-between gap-6'>
                 {Object.values(CAPONIERS).map(c => 
                     <div key={c} className={`relative m-auto ${caponier === c ? 'brightness-100' : 'brightness-[.4]'}`}>

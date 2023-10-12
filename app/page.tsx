@@ -25,7 +25,7 @@ export default async function Page() {
       <Button onClick={scrollToMap} className={`pt-[2.5rem] z-40 relative bg-military-green-400 hover:bg-military-green-500 hover:text-white px-8 text-xl font-bold uppercase mx-auto mt-10 block ${space_grotesk.className}`}>{dict.buttons.book}</Button>
       <div ref={mapRef} className='mt-[50vh]'></div>
       <PoligonMap className='mt-[50vh]'></PoligonMap>
-      <Carousel className='rounded-xl h-[37rem] mt-8' autoplay={false} autoplayDelay={3000} loop>
+      <Carousel className='rounded-xl h-[37rem] mt-10' autoplay={false} autoplayDelay={3000} loop>
         <div className='relative w-full h-full'>
           <img
           src="/3.png"
