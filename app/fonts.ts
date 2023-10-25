@@ -5,19 +5,6 @@ export const space_grotesk = Noto_Sans_Display({
     subsets: ['latin'],
     display: 'swap',
   })
-
-// SpaceGrotesk-VariableFont_wght.ttf
-
-// export const space_grotesk = localFont({
-//     src: [
-//         {
-//             path: '../public/SpaceGrotesk-Bold.ttf',
-//             weight: '400',
-//             style: 'normal'
-//         },
-//     ],
-//   })
-
   
 export const arkidenz = localFont({
     src: [

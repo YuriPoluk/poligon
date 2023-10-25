@@ -10,11 +10,18 @@ const config: Config = withMT({
   theme: {
     extend: {
       colors: {
-        'military-green-400': '#A5B094',
-        'military-green-500': '#747F64',
-        'gray-200': '#EBEBEB',
-        'black-400': '#353535',
-        'black-500': '#171717',
+        main: {
+          400: '#A5B094',
+          500: '#747F64'
+        },
+        black: {
+          400: '#353535',
+          500: '#171717',
+          900: '#000000'
+        },
+        grey: {
+          200: '#EBEBEB'
+        },
         'label-grey': 'rgba(255 255 255 0.2)'
       },
       rounded: {

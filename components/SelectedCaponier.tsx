@@ -31,7 +31,7 @@ export default function SelectedCaponier({caponier}: {caponier: keyof typeof CAP
                         <p className={`text-[1.3rem] font-normal ${arkidenz.className} ${caponier === c ? 'visible' : 'invsible'} text-center uppercase opacity-40`}>{dict.caponiers[c].length}</p>
                     </div>)}
             </div>
-            <Button className={`z-40 relative font-bold uppercase mx-auto mt-6 block ${space_grotesk.className} px-6 text-base bg-white text-black hover:text-military-green-500`}>
+            <Button className={`z-40 relative mx-auto mt-6 block ${space_grotesk.className} px-6 button-text-small bg-white text-black-900 hover:text-main-500`}>
                 {dict.buttons.chooseThis}
             </Button>
         </div>

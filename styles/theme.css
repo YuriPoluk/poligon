@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer utilities {
+    .h1-bold {
+        @apply text-[4rem] font-bold leading-[105%] uppercase 
+    }
+
+    .h3-bold {
+        @apply text-[2.5rem] font-bold leading-[120%] uppercase 
+    }
+
+    .h4-bold {
+        @apply text-[2rem] font-bold leading-[150%] uppercase 
+    }
+
+    .body-text {
+        @apply text-[1.3125rem] font-normal leading-[133%] 
+    }
+
+    .button-text {
+        @apply text-[1.25rem] font-bold leading-normal uppercase
+    }
+
+    .button-text-small {
+        @apply text-[1rem] font-bold leading-normal uppercase
+    }
+
+    .small-text-regular {
+        @apply text-[0.875rem] font-normal leading-[200%] uppercase
+    }
+
+    .medium-text-regular {
+        @apply text-[1rem] font-normal leading-normal uppercase
+    }
+
+    .input-text {
+        @apply text-[1rem] font-normal leading-[175%]
+    }
+}
