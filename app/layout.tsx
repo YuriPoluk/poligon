@@ -1,13 +1,37 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Poligon',
-}
- 
-import { arkidenz, space_grotesk } from './fonts'
 import { getDictionary } from '@/dictionaries'
 import Link from 'next/link'
+import { Noto_Sans_Display } from 'next/font/google'
+import localFont from 'next/font/local'
+
+export const spaceGrotesk = Noto_Sans_Display({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  weight: ['400', '700'],
+  variable: '--font-spaceGrotesk'
+})
+  
+export const akzidenz = localFont({
+    src: [
+        {
+            path: '../public/Akzidenz-Grotesk Pro Regular.ttf',
+            weight: '400',
+            style: 'normal'
+        },
+        {
+            path: '../public/akzidenzgroteskpro_boldex.otf',
+            weight: '700',
+            style: 'normal'
+        },
+    ],
+    variable: '--font-akzidenz'
+  })
+
+export const metadata: Metadata = {
+  title: 'PLGN',
+  description: 'Найбільший сертифікований полігон в Україні'
+}
 
 export default function RootLayout({
   children,
@@ -18,8 +42,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={'px-[4.375em] py-6 bg-black-500 max-w-[1700px] m-auto'}>
-        <nav className={`w-full flex justify-between ${arkidenz.className} text-white h-16 small-text-regular`}>
+      <body className={`px-[4.375em] py-6 bg-black-500 max-w-[1700px] m-auto ${spaceGrotesk.variable} ${akzidenz.variable}`}>
+        <nav className={`w-full flex justify-between ${akzidenz.className} text-white h-16 small-text-regular`}>
           <div className='flex flex-row flex-start gap-[1.28rem] items-center'>
             <Link href="/prices" className='hover:font-bold hover:text-main-400 hover:cursor-pointer'>{dict.navbar.prices}</Link>
             <Link href="/" className='hover:font-bold hover:text-main-400 hover:cursor-pointer'>{dict.navbar.booking}</Link>

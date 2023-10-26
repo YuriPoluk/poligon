@@ -4,15 +4,15 @@
  
 @layer utilities {
     .h1-bold {
-        @apply text-[4rem] font-bold leading-[105%] uppercase 
+        @apply text-[4rem] font-bold leading-[105%] uppercase font-akzidenz
     }
 
     .h3-bold {
-        @apply text-[2.5rem] font-bold leading-[120%] uppercase 
+        @apply text-[2.5rem] font-bold leading-[120%] uppercase font-akzidenz
     }
 
     .h4-bold {
-        @apply text-[2rem] font-bold leading-[150%] uppercase 
+        @apply text-[2rem] font-bold leading-[150%] uppercase font-akzidenz
     }
 
     .body-text {
@@ -20,11 +20,11 @@
     }
 
     .button-text {
-        @apply text-[1.25rem] font-bold leading-normal uppercase
+        @apply text-[1.25rem] font-bold leading-normal uppercase font-spaceGrotesk
     }
 
     .button-text-small {
-        @apply text-[1rem] font-bold leading-normal uppercase
+        @apply text-[1rem] font-bold leading-normal uppercase font-spaceGrotesk
     }
 
     .small-text-regular {

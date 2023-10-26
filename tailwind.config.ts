@@ -28,8 +28,9 @@ const config: Config = withMT({
         '4xl': '2.5rem'
       },
       fontFamily: {
-        sans: ['var(--font-space-grotesk)']
-      }
+        akzidenz: ["var(--font-akzidenz)"],
+        spaceGrotesk: ["var(--font-spaceGrotesk)"],
+      },
     },
   },
   plugins: [
