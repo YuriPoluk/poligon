@@ -3,11 +3,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { space_grotesk, arkidenz } from '@/app/fonts'
-import { Button } from '.'
+import Button from '@/components/Button'
 import caponier1 from '../public/1.jpg'
 import caponier2 from '../public/2.jpg'
 import { CAPONIERS } from '@/constants'
 import { getDictionary } from '@/dictionaries'
+import Link from 'next/link'
 
 const IMAGE_MAP = {
     baghdad: caponier1,
@@ -31,9 +32,19 @@ export default function SelectedCaponier({caponier}: {caponier: keyof typeof CAP
                         <p className={`text-[1.3rem] font-normal ${arkidenz.className} ${caponier === c ? 'visible' : 'invsible'} text-center uppercase opacity-40`}>{dict.caponiers[c].length}</p>
                     </div>)}
             </div>
-            <Button className={`z-40 relative mx-auto mt-6 block ${space_grotesk.className} px-6 button-text-small bg-white text-black-900 hover:text-main-500`}>
-                {dict.buttons.chooseThis}
-            </Button>
+            <Link
+                href={{
+                    pathname: '/prices',
+                    query: {
+                        caponier
+                    }
+                }}
+            >
+                <Button className={`z-40 relative mx-auto mt-6 block ${space_grotesk.className} px-6 button-text-small bg-white text-black-900 hover:text-main-500`}>
+                    {dict.buttons.chooseThis}
+                </Button>
+            </Link>
+            
         </div>
   )
 }

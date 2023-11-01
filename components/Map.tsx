@@ -4,7 +4,7 @@ import { useLoadScript, GoogleMap, MarkerF } from '@react-google-maps/api';
 
 const GMAPS_API_KEY = 'AIzaSyCWzfwNXc8GNXLQKONwJws06OfVrHX3rmo'
 
-export default function Map() {
+export default function Map({ className }: { className: string }) {
     const { isLoaded } = useLoadScript({
         id: "google-map-script",
         googleMapsApiKey: GMAPS_API_KEY as string,
@@ -25,11 +25,11 @@ export default function Map() {
 
   return (
     <GoogleMap
+        mapContainerClassName={`h-[35rem] rounded-3xl mx-auto ${className}`}
         options={mapOptions}
         zoom={10}
         center={mapCenterPosition}
         mapTypeId={'roadmap'}
-        mapContainerStyle={{ width: '100%', height: '35rem', borderRadius: '24px' }}
         onLoad={() => console.log('Map Component Loaded...')}>
             <MarkerF
                 position={markerPosition}

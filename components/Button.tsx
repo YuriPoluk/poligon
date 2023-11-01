@@ -1,8 +1,7 @@
-import { space_grotesk } from '@/app/fonts'
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-export default function Button({ className, children, onClick }: { className?: string, children?: ReactNode | string, onClick?: () => void }) {
+export default function Button({ className, children, onClick, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button onClick={onClick} className={`py-4 rounded-[2.5rem] border-[1px] border-main-500 ` + className}>{children}</button>
+    <button onClick={onClick} {...props} className={`py-4 rounded-[2.5rem] border-[4px] border-main-500 ` + className}>{children}</button>
   )
 }

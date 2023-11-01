@@ -10,6 +10,7 @@ import { getDictionary } from '@/dictionaries'
 export default function Map({className, ref}: {className: string, ref?: LegacyRef<HTMLDivElement>}) {
   const dict = getDictionary('ua')
   const [caponier, setCaponier] = useState<keyof typeof CAPONIERS>(CAPONIERS.kabul)
+  
   return (
     <>
       <div className={`relative ${className}`}>

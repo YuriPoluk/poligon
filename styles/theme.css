@@ -16,7 +16,11 @@
     }
 
     .body-text {
-        @apply text-[1.3125rem] font-normal leading-[133%] 
+        @apply text-[1.3125rem] font-normal leading-[133%] font-akzidenz
+    }
+
+    .body-text-medium {
+        @apply text-[1.5rem] font-normal leading-[133%] font-akzidenz
     }
 
     .button-text {
@@ -28,14 +32,37 @@
     }
 
     .small-text-regular {
-        @apply text-[0.875rem] font-normal leading-[200%] uppercase
+        @apply text-[0.875rem] font-normal leading-[200%] uppercase font-akzidenz
+    }
+
+    .extra-small-text-regular {
+        @apply text-[0.65rem] font-normal leading-normal uppercase font-akzidenz
+    }
+
+    .small-text-bold {
+        @apply text-[1rem] font-bold leading-[200%] uppercase font-akzidenz
     }
 
     .medium-text-regular {
-        @apply text-[1rem] font-normal leading-normal uppercase
+        @apply text-[1rem] font-normal leading-normal uppercase font-spaceGrotesk
     }
 
     .input-text {
-        @apply text-[1rem] font-normal leading-[175%]
+        @apply text-[1rem] font-normal leading-[175%] font-akzidenz !important
+    }
+
+    .bth {
+        @apply py-4 rounded-[2.5rem] border-[1px] border-main-500 !important
+    }
+
+    .form-item {
+        @apply w-full h-12 px-4 py-[0.75rem] rounded-lg bg-grey-200 input-text text-black-500 justify-between placeholder:text-black-100 data-[placeholder]:text-black-100 focus-visible:ring-0 focus-visible:shadow-none !important
+    }
+
+    .form-label {
+        @apply input-text text-white mb-1
+    }
+    .validation-error {
+        @apply border-[3px] border-red-600 !important
     }
 }

@@ -1,10 +1,10 @@
 // import 'server-only'
-import en from './en'
+// import en from './en'
 import ua from './ua'
  
 const dictionaries = {
-  en,
+  // en,
   ua
 }
  
-export const getDictionary = (locale: 'en' | 'ua') => dictionaries[locale]
+export const getDictionary = (locale: 'ua') => dictionaries[locale]
