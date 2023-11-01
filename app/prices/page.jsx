@@ -28,7 +28,7 @@ const headerPriceData = [
     },
 ]
 
-export default function page({searchParams}) {
+export default function Зage({searchParams}) {
     const dict = getDictionary('ua')
 
     const caponierTabs = Object.keys(dict.caponiers).map(key => dict.caponiers[key].name)
